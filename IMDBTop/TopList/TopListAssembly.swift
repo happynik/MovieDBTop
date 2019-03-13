@@ -20,8 +20,7 @@ class TopListAssembly {
         interactor.presenter = presenter
         router.view = view
         
-        let navigationController = UINavigationController(rootViewController: view)
-        return navigationController
+        return view
     }
     
 }

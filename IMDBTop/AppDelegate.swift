@@ -15,9 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // TODO: need incapsulate
         let topList = TopListAssembly().build()
-        window?.rootViewController = topList
+        let navigationController = UINavigationController(rootViewController: topList)
+        window?.rootViewController = navigationController
         return true
     }
 
