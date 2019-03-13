@@ -23,7 +23,7 @@ class TopListPresenter: TopListPresenterProtocol {
         interactor.fetchItems()
     }
     
-    func present(items: [Cinema]) {
+    func present(items: [Movie]) {
         view.show(items: items)
     }
 }

@@ -10,13 +10,13 @@ import Foundation
 
 //MARK: - View
 protocol TopListViewProtocol: class {
-    func show(items: [Cinema])
+    func show(items: [Movie])
 }
 
 //MARK: - Presenter
 protocol TopListPresenterProtocol: class {
     func viewDidLoad()
-    func present(items: [Cinema])
+    func present(items: [Movie])
 }
 
 //MARK: - Interactor

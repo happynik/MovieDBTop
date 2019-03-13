@@ -29,7 +29,7 @@ class TopListViewController: UIViewController, TopListViewProtocol {
     }
     
     // MARK: - TopListViewProtocol
-    func show(items: [Cinema]) {
+    func show(items: [Movie]) {
         dataSource = TopListDataSource(items: items)
         tableView.dataSource = dataSource
         tableView.reloadData()

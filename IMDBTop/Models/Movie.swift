@@ -1,5 +1,5 @@
 //
-//  Cinema.swift
+//  Movie.swift
 //  IMDBTop
 //
 //  Created by Камилла Бадаева on 13/03/2019.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Cinema {
+struct Movie {
     var title: String
 }

@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class TopListDataSource: NSObject {
-    fileprivate var items: [Cinema]
+    fileprivate var items: [Movie]
     
-    init(items: [Cinema]) {
+    init(items: [Movie]) {
         self.items = items
     }
 }
@@ -37,7 +37,7 @@ extension TopListDataSource: UITableViewDataSource {
 }
 
 extension CinemaCell {
-    func fill(from item: Cinema) -> Self {
+    func fill(from item: Movie) -> Self {
         self.textLabel?.text = item.title
         return self
     }

@@ -13,6 +13,6 @@ class TopListInteractor: TopListInteractorProtocol {
     
     func fetchItems() {
         // TODO: get top items
-        presenter.present(items: [Cinema(title: "Kapitan Marvel"), Cinema(title: "Green Mile")])
+        presenter.present(items: [Movie(title: "Kapitan Marvel"), Movie(title: "Green Mile")])
     }
 }
