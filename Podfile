@@ -4,9 +4,8 @@ use_frameworks!
 
 target 'IMDBTop' do
   # Pods for IMDBTop
-  pod 'RxSwift',    '~> 4.0'
-  pod 'RxCocoa',    '~> 4.0'
-  pod 'Moya',       '~> 12.0'
+  pod 'RxCocoa',      '~> 4.0'
+  pod 'Moya/RxSwift', '~> 12.0'
 
 end
 
