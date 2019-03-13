@@ -10,17 +10,18 @@ import Foundation
 
 //MARK: - View
 protocol TopListViewProtocol: class {
-    
+    func show(items: [Cinema])
 }
 
 //MARK: - Presenter
 protocol TopListPresenterProtocol: class {
-    
+    func viewDidLoad()
+    func present(items: [Cinema])
 }
 
 //MARK: - Interactor
 protocol TopListInteractorProtocol: class {
-    
+    func fetchItems()
 }
 
 //MARK: - Router

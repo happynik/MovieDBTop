@@ -11,4 +11,33 @@ import UIKit
 class TopListViewController: UIViewController, TopListViewProtocol {
     var presenter: TopListPresenterProtocol!
     
+    @IBOutlet private weak var tableView: UITableView!
+    
+    private var dataSource: TopListDataSource?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+        presenter.viewDidLoad()
+    }
+    
+    private func setupUI() {
+        navigationItem.title = "Top List"
+        
+        tableView.register(CinemaCell.self, forCellReuseIdentifier: CinemaCell.reuseIdentifier)
+        tableView.delegate = self
+    }
+    
+    // MARK: - TopListViewProtocol
+    func show(items: [Cinema]) {
+        dataSource = TopListDataSource(items: items)
+        tableView.dataSource = dataSource
+        tableView.reloadData()
+    }
+}
+
+extension TopListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TODO: navigate to Item
+    }
 }

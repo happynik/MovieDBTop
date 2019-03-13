@@ -19,4 +19,11 @@ class TopListPresenter: TopListPresenterProtocol {
         self.view = view
     }
     
+    func viewDidLoad() {
+        interactor.fetchItems()
+    }
+    
+    func present(items: [Cinema]) {
+        view.show(items: items)
+    }
 }
