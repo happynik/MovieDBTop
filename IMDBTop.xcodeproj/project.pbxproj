@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		44C08371AF295E63029331EC /* Pods_IMDBTop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AAC4CF0B36C9EAB104CFB5C /* Pods_IMDBTop.framework */; };
+		A30F94A8223901360024F105 /* TopListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F94A1223901360024F105 /* TopListPresenter.swift */; };
+		A30F94A9223901360024F105 /* TopListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F94A2223901360024F105 /* TopListRouter.swift */; };
+		A30F94AA223901360024F105 /* TopListModuleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F94A3223901360024F105 /* TopListModuleAPI.swift */; };
+		A30F94AB223901360024F105 /* TopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F94A4223901360024F105 /* TopListViewController.swift */; };
+		A30F94AC223901360024F105 /* TopListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F94A5223901360024F105 /* TopListAssembly.swift */; };
+		A30F94AD223901360024F105 /* TopListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F94A6223901360024F105 /* TopListInteractor.swift */; };
+		A30F94AE223901360024F105 /* TopListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A30F94A7223901360024F105 /* TopListViewController.xib */; };
 		A3C7D0512237E9DE00422773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C7D0502237E9DE00422773 /* AppDelegate.swift */; };
 		A3C7D0532237E9DE00422773 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C7D0522237E9DE00422773 /* ViewController.swift */; };
 		A3C7D0562237E9DE00422773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D0542237E9DE00422773 /* Main.storyboard */; };
@@ -32,6 +39,13 @@
 		682762B2506DA8769B046492 /* Pods-IMDBTop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBTop.release.xcconfig"; path = "Target Support Files/Pods-IMDBTop/Pods-IMDBTop.release.xcconfig"; sourceTree = "<group>"; };
 		8E75FEB836DC79F7A748987C /* Pods-IMDBTopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBTopTests.debug.xcconfig"; path = "Target Support Files/Pods-IMDBTopTests/Pods-IMDBTopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9AAC4CF0B36C9EAB104CFB5C /* Pods_IMDBTop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMDBTop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30F94A1223901360024F105 /* TopListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListPresenter.swift; sourceTree = "<group>"; };
+		A30F94A2223901360024F105 /* TopListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListRouter.swift; sourceTree = "<group>"; };
+		A30F94A3223901360024F105 /* TopListModuleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListModuleAPI.swift; sourceTree = "<group>"; };
+		A30F94A4223901360024F105 /* TopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListViewController.swift; sourceTree = "<group>"; };
+		A30F94A5223901360024F105 /* TopListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListAssembly.swift; sourceTree = "<group>"; };
+		A30F94A6223901360024F105 /* TopListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListInteractor.swift; sourceTree = "<group>"; };
+		A30F94A7223901360024F105 /* TopListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopListViewController.xib; sourceTree = "<group>"; };
 		A3C7D04D2237E9DE00422773 /* IMDBTop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMDBTop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C7D0502237E9DE00422773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C7D0522237E9DE00422773 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +91,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A30F94A0223901180024F105 /* TopList */ = {
+			isa = PBXGroup;
+			children = (
+				A30F94A3223901360024F105 /* TopListModuleAPI.swift */,
+				A30F94A7223901360024F105 /* TopListViewController.xib */,
+				A30F94A4223901360024F105 /* TopListViewController.swift */,
+				A30F94A1223901360024F105 /* TopListPresenter.swift */,
+				A30F94A6223901360024F105 /* TopListInteractor.swift */,
+				A30F94A2223901360024F105 /* TopListRouter.swift */,
+				A30F94A5223901360024F105 /* TopListAssembly.swift */,
+			);
+			path = TopList;
+			sourceTree = "<group>";
+		};
 		A3C7D0442237E9DE00422773 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +128,7 @@
 		A3C7D04F2237E9DE00422773 /* IMDBTop */ = {
 			isa = PBXGroup;
 			children = (
+				A30F94A0223901180024F105 /* TopList */,
 				A3C7D0502237E9DE00422773 /* AppDelegate.swift */,
 				A3C7D0522237E9DE00422773 /* ViewController.swift */,
 				A3C7D0542237E9DE00422773 /* Main.storyboard */,
@@ -213,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A30F94AE223901360024F105 /* TopListViewController.xib in Resources */,
 				A3C7D05B2237E9E000422773 /* LaunchScreen.storyboard in Resources */,
 				A3C7D0582237E9E000422773 /* Assets.xcassets in Resources */,
 				A3C7D0562237E9DE00422773 /* Main.storyboard in Resources */,
@@ -340,8 +370,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A30F94AB223901360024F105 /* TopListViewController.swift in Sources */,
 				A3C7D0532237E9DE00422773 /* ViewController.swift in Sources */,
 				A3C7D0512237E9DE00422773 /* AppDelegate.swift in Sources */,
+				A30F94A9223901360024F105 /* TopListRouter.swift in Sources */,
+				A30F94AD223901360024F105 /* TopListInteractor.swift in Sources */,
+				A30F94AA223901360024F105 /* TopListModuleAPI.swift in Sources */,
+				A30F94AC223901360024F105 /* TopListAssembly.swift in Sources */,
+				A30F94A8223901360024F105 /* TopListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
