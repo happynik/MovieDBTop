@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum MovieAPI {
-    struct QueryParameters {
+    struct QueryParameters: Codable {
         var language: String?
         var page: Int?
         var region: String?
@@ -45,13 +45,9 @@ extension MovieAPI: TheMoviedbTarget {
         return .successCodes
     }
     
-    var sampleData: Data {
-        return Data()
-    }
-    
-    var queryParameters: [String: String] {
+    var queryAdditionalParameters: Encodable? {
         switch self {
-        case .topRated: return self.commonQueryParameters
+        case let .topRated(params): return params
         }
     }
     
@@ -60,8 +56,12 @@ extension MovieAPI: TheMoviedbTarget {
         case .topRated: return .requestParameters(parameters: queryParameters, encoding: URLEncoding.queryString)
         }
     }
-    
-    var headers: [String : String]? {
-        return nil
+}
+
+extension Encodable {
+    func asDictionary() -> [String: String]? {
+        return (try? JSONEncoder().encode(self))
+            .flatMap { try? JSONSerialization.jsonObject(with: $0, options: []) }
+            .flatMap { $0 as? [String : String] }
     }
 }

@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Moya
 
 class TopListAssembly {
     
     func build() -> UIViewController {
         let view = TopListViewController()
-        let interactor = TopListInteractor()
+        let interactor = TopListInteractor(moviesService: MovieService(provider: MoyaProvider<MovieAPI>()))
         let router = TopListRouter()
         let presenter = TopListPresenter(view: view, interactor: interactor, router: router)
         

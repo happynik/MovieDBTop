@@ -11,7 +11,7 @@ import Moya
 import RxSwift
 
 protocol MovieServiceProtocol {
-    func topRated() -> Single<[Movie]>
+    func topRated() -> Single<TopRated.Response>
 }
 
 class MovieService: MovieServiceProtocol {
@@ -22,10 +22,8 @@ class MovieService: MovieServiceProtocol {
     }
     
     // TODO: need pagination
-    func topRated() -> Single<[Movie]> {
+    func topRated() -> Single<TopRated.Response> {
         let params = MovieAPI.QueryParameters()
-        return provider.rx.request(.topRated(queryParameters: params)).map([Movie].self)
-//        return .never()
-//        provider.rx
+        return provider.rx.request(.topRated(queryParameters: params)).map(TopRated.Response.self)
     }
 }

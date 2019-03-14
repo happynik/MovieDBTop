@@ -9,7 +9,7 @@
 import Foundation
 
 enum TopRated {
-    struct Response {
+    struct Response: Codable {
         var page: Int?
         var result: [Movie]?
         var totalResults: Int?
