@@ -19,11 +19,11 @@ protocol TheMoviedbTarget: TargetType {
 
 extension TheMoviedbTarget {
     var basePath: String {
-        return "/"
+        return ""
     }
     
     var baseURL: URL {
-        return URL(string: "https://api.themoviedb.org/3/\(basePath)")!
+        return URL(string: "https://api.themoviedb.org/3\(basePath)")!
     }
     
     var validationType: ValidationType {

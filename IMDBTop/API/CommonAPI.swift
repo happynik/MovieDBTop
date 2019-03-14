@@ -32,7 +32,7 @@ extension CommonAPI: TheMoviedbTarget {
     
     var task: Task {
         switch self {
-        case .configuration: return .requestPlain
+        case .configuration: return .requestParameters(parameters: queryParameters, encoding: URLEncoding.queryString)
         }
     }
 }

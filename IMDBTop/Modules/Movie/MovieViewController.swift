@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AlamofireImage
+import RxSwift
 
 class MovieViewController: UIViewController, MovieViewProtocol {
     var presenter: MoviePresenterProtocol!
@@ -16,6 +16,8 @@ class MovieViewController: UIViewController, MovieViewProtocol {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var ratingLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
+    
+    private let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +30,7 @@ class MovieViewController: UIViewController, MovieViewProtocol {
     }
     
     func show(movie: Movie) {
-//        presenter.imageUrl(for: movie.posterPath) { [weak self] url in
-//            self?.imageView.setImage(withUrl: url)
-//        }
-//        
-//        imageView.setImage(withPath: movie.posterPath)
+        imageView.setImage(withPath: movie.posterPath).disposed(by: bag)
         
         titleLabel.text = movie.title
         ratingLabel.text = "Rating \(movie.votePresent)"

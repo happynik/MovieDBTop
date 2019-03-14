@@ -20,13 +20,13 @@ enum Configuration {
     }
     
     struct Images: Codable {
-        var baseUrl: String
-        var secureBaseUrl: String
-        var backdropSizes: [String]
-        var logoSizes: [String]
-        var posterSizes: [String]
-        var profileSizes: [String]
-        var stillSizes: [String]
+        var baseUrl: String?
+        var secureBaseUrl: String?
+        var backdropSizes: [String]?
+        var logoSizes: [String]?
+        var posterSizes: [String]?
+        var profileSizes: [String]?
+        var stillSizes: [String]?
 
         enum CodingKeys: String, CodingKey {
             case baseUrl = "base_url"

@@ -26,7 +26,7 @@ enum MovieAPI {
 
 extension MovieAPI: TheMoviedbTarget {
     var basePath: String {
-        return "movie/"
+        return "/movie"
     }
     
     var path: String {
