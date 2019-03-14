@@ -30,6 +30,13 @@
 		A3C7D0582237E9E000422773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D0572237E9E000422773 /* Assets.xcassets */; };
 		A3C7D05B2237E9E000422773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D0592237E9E000422773 /* LaunchScreen.storyboard */; };
 		A3C7D0662237E9E000422773 /* IMDBTopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C7D0652237E9E000422773 /* IMDBTopTests.swift */; };
+		A3DCCB55223A376100372453 /* MoviePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DCCB4E223A376100372453 /* MoviePresenter.swift */; };
+		A3DCCB56223A376100372453 /* MovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DCCB4F223A376100372453 /* MovieRouter.swift */; };
+		A3DCCB57223A376100372453 /* MovieModuleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DCCB50223A376100372453 /* MovieModuleAPI.swift */; };
+		A3DCCB58223A376100372453 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DCCB51223A376100372453 /* MovieViewController.swift */; };
+		A3DCCB59223A376100372453 /* MovieAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DCCB52223A376100372453 /* MovieAssembly.swift */; };
+		A3DCCB5A223A376100372453 /* MovieInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DCCB53223A376100372453 /* MovieInteractor.swift */; };
+		A3DCCB5B223A376100372453 /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3DCCB54223A376100372453 /* MovieViewController.xib */; };
 		B045382C1B833428E48810FB /* Pods_IMDBTopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7D4A2DEE5B069E7126046B7 /* Pods_IMDBTopTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +81,13 @@
 		A3C7D0612237E9E000422773 /* IMDBTopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMDBTopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C7D0652237E9E000422773 /* IMDBTopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBTopTests.swift; sourceTree = "<group>"; };
 		A3C7D0672237E9E000422773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3DCCB4E223A376100372453 /* MoviePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePresenter.swift; sourceTree = "<group>"; };
+		A3DCCB4F223A376100372453 /* MovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRouter.swift; sourceTree = "<group>"; };
+		A3DCCB50223A376100372453 /* MovieModuleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModuleAPI.swift; sourceTree = "<group>"; };
+		A3DCCB51223A376100372453 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		A3DCCB52223A376100372453 /* MovieAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAssembly.swift; sourceTree = "<group>"; };
+		A3DCCB53223A376100372453 /* MovieInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInteractor.swift; sourceTree = "<group>"; };
+		A3DCCB54223A376100372453 /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
 		CBD8C51ABEFBB9AEB0D3BC77 /* Pods-IMDBTopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDBTopTests.release.xcconfig"; path = "Target Support Files/Pods-IMDBTopTests/Pods-IMDBTopTests.release.xcconfig"; sourceTree = "<group>"; };
 		D7D4A2DEE5B069E7126046B7 /* Pods_IMDBTopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMDBTopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -164,6 +178,8 @@
 		A36F949D223953E7009DBC1C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A3DCCB4D223A373A00372453 /* Favorites */,
+				A3DCCB4C223A372D00372453 /* Movie */,
 				A30F94A0223901180024F105 /* TopList */,
 			);
 			path = Modules;
@@ -213,6 +229,27 @@
 				A3C7D0672237E9E000422773 /* Info.plist */,
 			);
 			path = IMDBTopTests;
+			sourceTree = "<group>";
+		};
+		A3DCCB4C223A372D00372453 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				A3DCCB50223A376100372453 /* MovieModuleAPI.swift */,
+				A3DCCB54223A376100372453 /* MovieViewController.xib */,
+				A3DCCB51223A376100372453 /* MovieViewController.swift */,
+				A3DCCB4E223A376100372453 /* MoviePresenter.swift */,
+				A3DCCB53223A376100372453 /* MovieInteractor.swift */,
+				A3DCCB4F223A376100372453 /* MovieRouter.swift */,
+				A3DCCB52223A376100372453 /* MovieAssembly.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		A3DCCB4D223A373A00372453 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 		CDE35895B06E22824755D0CF /* Frameworks */ = {
@@ -312,6 +349,7 @@
 				A30F94B922390AD10024F105 /* CinemaCell.xib in Resources */,
 				A30F94AE223901360024F105 /* TopListViewController.xib in Resources */,
 				A3C7D05B2237E9E000422773 /* LaunchScreen.storyboard in Resources */,
+				A3DCCB5B223A376100372453 /* MovieViewController.xib in Resources */,
 				A3C7D0582237E9E000422773 /* Assets.xcassets in Resources */,
 				A3C7D0562237E9DE00422773 /* Main.storyboard in Resources */,
 			);
@@ -441,19 +479,25 @@
 				A30F94AB223901360024F105 /* TopListViewController.swift in Sources */,
 				A36F949A22394E4A009DBC1C /* TheMoviedbTarget.swift in Sources */,
 				A3C7D0532237E9DE00422773 /* ViewController.swift in Sources */,
+				A3DCCB5A223A376100372453 /* MovieInteractor.swift in Sources */,
 				A30F94B822390AD10024F105 /* CinemaCell.swift in Sources */,
 				A30F94C1223916F60024F105 /* MovieAPI.swift in Sources */,
+				A3DCCB56223A376100372453 /* MovieRouter.swift in Sources */,
 				A30F94B5223909A60024F105 /* TopListDataSource.swift in Sources */,
 				A3C7D0512237E9DE00422773 /* AppDelegate.swift in Sources */,
 				A30F94BC22390E570024F105 /* Movie.swift in Sources */,
 				A36F949C2239518E009DBC1C /* TopRated.swift in Sources */,
 				A30F94A9223901360024F105 /* TopListRouter.swift in Sources */,
+				A3DCCB58223A376100372453 /* MovieViewController.swift in Sources */,
 				A30F94AD223901360024F105 /* TopListInteractor.swift in Sources */,
 				A30F94AA223901360024F105 /* TopListModuleAPI.swift in Sources */,
 				A30F94C322391A500024F105 /* MoviesService.swift in Sources */,
 				A36F949F223974AA009DBC1C /* BaseAPI.swift in Sources */,
 				A30F94AC223901360024F105 /* TopListAssembly.swift in Sources */,
+				A3DCCB55223A376100372453 /* MoviePresenter.swift in Sources */,
 				A30F94A8223901360024F105 /* TopListPresenter.swift in Sources */,
+				A3DCCB57223A376100372453 /* MovieModuleAPI.swift in Sources */,
+				A3DCCB59223A376100372453 /* MovieAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
