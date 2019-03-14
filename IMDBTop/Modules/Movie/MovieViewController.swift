@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieViewController: UIViewController, MovieViewProtocol {
     var presenter: MoviePresenterProtocol!
@@ -27,6 +28,12 @@ class MovieViewController: UIViewController, MovieViewProtocol {
     }
     
     func show(movie: Movie) {
+//        presenter.imageUrl(for: movie.posterPath) { [weak self] url in
+//            self?.imageView.setImage(withUrl: url)
+//        }
+//        
+//        imageView.setImage(withPath: movie.posterPath)
+        
         titleLabel.text = movie.title
         ratingLabel.text = "Rating \(movie.votePresent)"
         descriptionLabel.text = movie.overview

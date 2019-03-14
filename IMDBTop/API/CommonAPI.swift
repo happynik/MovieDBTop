@@ -1,5 +1,5 @@
 //
-//  BaseAPI.swift
+//  CommonAPI.swift
 //  IMDBTop
 //
 //  Created by Камилла Бадаева on 13/03/2019.
@@ -9,11 +9,11 @@
 import Foundation
 import Moya
 
-enum BaseAPI {
+enum CommonAPI {
     case configuration
 }
 
-extension BaseAPI: TheMoviedbTarget {
+extension CommonAPI: TheMoviedbTarget {
     var queryParameters: [String : String] {
         return commonQueryParameters
     }

@@ -23,7 +23,9 @@
 		A30F94C322391A500024F105 /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30F94C222391A500024F105 /* MoviesService.swift */; };
 		A36F949A22394E4A009DBC1C /* TheMoviedbTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F949922394E4A009DBC1C /* TheMoviedbTarget.swift */; };
 		A36F949C2239518E009DBC1C /* TopRated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F949B2239518E009DBC1C /* TopRated.swift */; };
-		A36F949F223974AA009DBC1C /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F949E223974AA009DBC1C /* BaseAPI.swift */; };
+		A36F949F223974AA009DBC1C /* CommonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F949E223974AA009DBC1C /* CommonAPI.swift */; };
+		A3B41B1F223A46DF00E7AF37 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B41B1E223A46DF00E7AF37 /* CommonService.swift */; };
+		A3B41B21223A47AF00E7AF37 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B41B20223A47AF00E7AF37 /* Configuration.swift */; };
 		A3C7D0512237E9DE00422773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C7D0502237E9DE00422773 /* AppDelegate.swift */; };
 		A3C7D0532237E9DE00422773 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C7D0522237E9DE00422773 /* ViewController.swift */; };
 		A3C7D0562237E9DE00422773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3C7D0542237E9DE00422773 /* Main.storyboard */; };
@@ -70,7 +72,9 @@
 		A30F94C222391A500024F105 /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
 		A36F949922394E4A009DBC1C /* TheMoviedbTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMoviedbTarget.swift; sourceTree = "<group>"; };
 		A36F949B2239518E009DBC1C /* TopRated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRated.swift; sourceTree = "<group>"; };
-		A36F949E223974AA009DBC1C /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		A36F949E223974AA009DBC1C /* CommonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAPI.swift; sourceTree = "<group>"; };
+		A3B41B1E223A46DF00E7AF37 /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
+		A3B41B20223A47AF00E7AF37 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A3C7D04D2237E9DE00422773 /* IMDBTop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMDBTop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C7D0502237E9DE00422773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C7D0522237E9DE00422773 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			children = (
 				A30F94BB22390E570024F105 /* Movie.swift */,
 				A36F949B2239518E009DBC1C /* TopRated.swift */,
+				A3B41B20223A47AF00E7AF37 /* Configuration.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				A30F94C222391A500024F105 /* MoviesService.swift */,
+				A3B41B1E223A46DF00E7AF37 /* CommonService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -170,7 +176,7 @@
 			children = (
 				A36F949922394E4A009DBC1C /* TheMoviedbTarget.swift */,
 				A30F94C0223916F60024F105 /* MovieAPI.swift */,
-				A36F949E223974AA009DBC1C /* BaseAPI.swift */,
+				A36F949E223974AA009DBC1C /* CommonAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -183,6 +189,13 @@
 				A30F94A0223901180024F105 /* TopList */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		A3B41B1D223A46A900E7AF37 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A3C7D0442237E9DE00422773 = {
@@ -212,6 +225,7 @@
 				A30F94BF223915EC0024F105 /* API */,
 				A30F94BE223915D60024F105 /* Services */,
 				A30F94BA22390E460024F105 /* Models */,
+				A3B41B1D223A46A900E7AF37 /* Extensions */,
 				A3C7D0502237E9DE00422773 /* AppDelegate.swift */,
 				A3C7D0522237E9DE00422773 /* ViewController.swift */,
 				A3C7D0542237E9DE00422773 /* Main.storyboard */,
@@ -397,6 +411,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-IMDBTop/Pods-IMDBTop-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
@@ -408,6 +423,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
@@ -482,6 +498,7 @@
 				A3DCCB5A223A376100372453 /* MovieInteractor.swift in Sources */,
 				A30F94B822390AD10024F105 /* CinemaCell.swift in Sources */,
 				A30F94C1223916F60024F105 /* MovieAPI.swift in Sources */,
+				A3B41B21223A47AF00E7AF37 /* Configuration.swift in Sources */,
 				A3DCCB56223A376100372453 /* MovieRouter.swift in Sources */,
 				A30F94B5223909A60024F105 /* TopListDataSource.swift in Sources */,
 				A3C7D0512237E9DE00422773 /* AppDelegate.swift in Sources */,
@@ -492,8 +509,9 @@
 				A30F94AD223901360024F105 /* TopListInteractor.swift in Sources */,
 				A30F94AA223901360024F105 /* TopListModuleAPI.swift in Sources */,
 				A30F94C322391A500024F105 /* MoviesService.swift in Sources */,
-				A36F949F223974AA009DBC1C /* BaseAPI.swift in Sources */,
+				A36F949F223974AA009DBC1C /* CommonAPI.swift in Sources */,
 				A30F94AC223901360024F105 /* TopListAssembly.swift in Sources */,
+				A3B41B1F223A46DF00E7AF37 /* CommonService.swift in Sources */,
 				A3DCCB55223A376100372453 /* MoviePresenter.swift in Sources */,
 				A30F94A8223901360024F105 /* TopListPresenter.swift in Sources */,
 				A3DCCB57223A376100372453 /* MovieModuleAPI.swift in Sources */,
