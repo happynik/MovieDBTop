@@ -12,6 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieViewController" customModule="IMDBTop" customModuleProvider="target">
             <connections>
+                <outlet property="descriptionLabel" destination="k8j-Ym-eQb" id="W5Y-LX-hAS"/>
+                <outlet property="imageView" destination="Uk6-PX-jba" id="JeP-lU-yRQ"/>
+                <outlet property="ratingLabel" destination="Ij5-U3-MsP" id="Rug-zS-dUE"/>
+                <outlet property="titleLabel" destination="BjD-Hy-Urk" id="tPI-5Y-rEx"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Bqp-6s-mSE"/>
             </connections>
         </placeholder>

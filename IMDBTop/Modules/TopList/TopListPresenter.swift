@@ -27,7 +27,7 @@ class TopListPresenter: TopListPresenterProtocol {
         view.show(items: items)
     }
     
-    func presentMovie() {
-        router.openMovie()
+    func present(movie: Movie) {
+        router.open(movie: movie)
     }
 }

@@ -10,4 +10,10 @@ import Foundation
 
 class MovieInteractor: MovieInteractorProtocol {
     weak var presenter: MoviePresenterProtocol!
+    
+    var movie: Movie
+    
+    init(movie: Movie) {
+        self.movie = movie
+    }
 }

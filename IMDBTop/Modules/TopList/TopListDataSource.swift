@@ -15,6 +15,13 @@ class TopListDataSource: NSObject {
     init(items: [Movie]) {
         self.items = items
     }
+    
+    func movie(at index: Int) -> Movie? {
+        guard 0 <= index, index < items.count else {
+            return nil
+        }
+        return items[index]
+    }
 }
 
 extension TopListDataSource: UITableViewDataSource {

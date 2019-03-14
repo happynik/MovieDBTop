@@ -19,4 +19,7 @@ class MoviePresenter: MoviePresenterProtocol {
         self.view = view
     }
     
+    func viewDidLoad() {
+        view.show(movie: interactor.movie)
+    }
 }
