@@ -12,8 +12,10 @@ import Moya
 class TopListAssembly {
     
     func build() -> UIViewController {
+        let provider = MoyaProvider<MovieAPI>(plugins: [NetworkLoggerPlugin(verbose: true)])
+        
         let view = TopListViewController()
-        let interactor = TopListInteractor(moviesService: MovieService(provider: MoyaProvider<MovieAPI>()))
+        let interactor = TopListInteractor(moviesService: MovieService(provider: provider))
         let router = TopListRouter()
         let presenter = TopListPresenter(view: view, interactor: interactor, router: router)
         

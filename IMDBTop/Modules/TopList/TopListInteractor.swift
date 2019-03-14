@@ -22,7 +22,7 @@ class TopListInteractor: TopListInteractorProtocol {
     func fetchItems() {
         moviesService.topRated()
             .subscribe(onSuccess: { [weak self] response in
-                guard let movies = response.result else {
+                guard let movies = response.results else {
                     return
                 }
                 
