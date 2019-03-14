@@ -43,9 +43,41 @@ extension TopListDataSource: UITableViewDataSource {
     }
 }
 
-extension CinemaCell {
+private extension CinemaCell {
     func fill(from item: Movie) -> Self {
-        self.textLabel?.text = item.title
+        posterView?.setImage(withPath: item.posterPath).disposed(by: bag)
+        titleLabel?.text = item.titlePresent
+        if let vote = item.voteAverage {
+            ratingLabel.text = "Rating \(vote)"
+        } else {
+            ratingLabel.isHidden = true
+        }
+        
+        if let overview = item.overview {
+            descriptionLabel?.text = overview
+        } else {
+            descriptionLabel.isHidden = true
+        }
         return self
+    }
+}
+
+private extension Movie {
+    var titlePresent: String? {
+        guard
+            let title = title,
+            let releaseYear = releaseYear else {
+                return nil
+        }
+        return "\(title) (\(releaseYear))"
+    }
+    
+    private var releaseYear: String? {
+        guard let date = releaseDate else {
+            return nil
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy"
+        return dateFormatter.string(from: date)
     }
 }

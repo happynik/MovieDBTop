@@ -17,6 +17,7 @@ protocol CommonServiceProtocol {
 class CommonService: CommonServiceProtocol {
     private var provider: MoyaProvider<CommonAPI>
     
+    private var cachedConfigObservable: Single<Configuration.Images?>?
     private var lastConfigImages: Configuration.Images?
     
     init(provider: MoyaProvider<CommonAPI>) {
@@ -24,13 +25,20 @@ class CommonService: CommonServiceProtocol {
     }
     
     func ImagesConfig() -> Single<Configuration.Images?> {
+        if let cachedObservable = cachedConfigObservable {
+            return cachedObservable
+        }
         if let configImages = lastConfigImages {
             return .just(configImages)
         }
-        return provider.rx.request(.configuration)
+        let configObservable = provider.rx.request(.configuration)
             .parse(Configuration.Response.self)
             .do(onSuccess: { [weak self] response in
                 self?.lastConfigImages = response.images
+                self?.cachedConfigObservable = nil
             }).map { $0.images }
+            .asObservable().share().asSingle()
+        cachedConfigObservable = configObservable
+        return configObservable
     }
 }

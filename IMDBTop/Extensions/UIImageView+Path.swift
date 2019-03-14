@@ -24,8 +24,6 @@ extension UIImageView {
                         return
                 }
                 self?.af_setImage(withURL: url)
-            }, onError: { error in
-                print(error)
             })
     }
 }

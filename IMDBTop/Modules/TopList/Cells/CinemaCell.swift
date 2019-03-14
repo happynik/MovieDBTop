@@ -7,24 +7,26 @@
 //
 
 import UIKit
+import RxSwift
 
 class CinemaCell: UITableViewCell {
     static let reuseIdentifier = "CinemaCell"
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet weak var posterView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    let bag = DisposeBag()
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        textLabel?.text = nil
+        titleLabel.text = nil
+        
+        ratingLabel.text = nil
+        ratingLabel.isHidden = false
+        
+        descriptionLabel.text = nil
+        descriptionLabel.isHidden = false
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

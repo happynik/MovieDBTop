@@ -24,7 +24,7 @@ class TopListViewController: UIViewController, TopListViewProtocol {
     private func setupUI() {
         navigationItem.title = "Top List"
         
-        tableView.register(CinemaCell.self, forCellReuseIdentifier: CinemaCell.reuseIdentifier)
+        tableView.register(UINib(nibName: CinemaCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: CinemaCell.reuseIdentifier)
         tableView.delegate = self
     }
     
