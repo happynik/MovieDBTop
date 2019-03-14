@@ -41,5 +41,6 @@ extension TopListViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         // TODO: navigate to Item
+        presenter.presentMovie()
     }
 }

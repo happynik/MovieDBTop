@@ -17,6 +17,7 @@ protocol TopListViewProtocol: class {
 protocol TopListPresenterProtocol: class {
     func viewDidLoad()
     func present(items: [Movie])
+    func presentMovie()
 }
 
 //MARK: - Interactor
@@ -26,5 +27,5 @@ protocol TopListInteractorProtocol: class {
 
 //MARK: - Router
 protocol TopListRouterProtocol: class {
-    
+    func openMovie()
 }

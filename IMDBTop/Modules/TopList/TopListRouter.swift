@@ -10,4 +10,9 @@ import UIKit
 
 class TopListRouter: TopListRouterProtocol {
     weak var view: UIViewController!
+    
+    func openMovie() {
+        let movie = MovieAssembly().build()
+        view.navigationController?.pushViewController(movie, animated: true)
+    }
 }
