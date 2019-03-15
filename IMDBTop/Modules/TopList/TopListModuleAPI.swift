@@ -11,6 +11,7 @@ import Foundation
 //MARK: - View
 protocol TopListViewProtocol: class {
     func show(items: [Movie])
+    func show(loading: Bool)
 }
 
 //MARK: - Presenter

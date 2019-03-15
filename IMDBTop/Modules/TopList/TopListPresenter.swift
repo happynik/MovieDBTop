@@ -20,14 +20,17 @@ class TopListPresenter: TopListPresenterProtocol {
     }
     
     func viewDidLoad() {
+        view.show(loading: true)
         interactor.fetchItems()
     }
     
     func present(items: [Movie]) {
+        view.show(loading: false)
         view.show(items: items)
     }
     
     func presentNewPage() {
+        view.show(loading: true)
         interactor.fetchItems()
     }
     

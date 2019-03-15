@@ -12,6 +12,7 @@ class TopListViewController: UIViewController, TopListViewProtocol {
     var presenter: TopListPresenterProtocol!
     
     @IBOutlet private weak var tableView: UITableView!
+    private var activityIndicator: UIActivityIndicatorView!
     
     private var dataSource: TopListDataSource?
     
@@ -29,12 +30,26 @@ class TopListViewController: UIViewController, TopListViewProtocol {
         
         dataSource = TopListDataSource(items: [])
         tableView.dataSource = dataSource
+        
+        activityIndicator = UIActivityIndicatorView(style: .gray)
+        activityIndicator.isHidden = false
+        tableView.tableFooterView = activityIndicator
     }
     
     // MARK: - TopListViewProtocol
     func show(items: [Movie]) {
         dataSource?.append(items)
         tableView.reloadData()
+    }
+    
+    func show(loading: Bool) {
+        if loading {
+            activityIndicator.startAnimating()
+            activityIndicator.isHidden = false
+        } else {
+            activityIndicator.isHidden = true
+            activityIndicator.stopAnimating()
+        }
     }
 }
 
