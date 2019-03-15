@@ -7,6 +7,7 @@ target 'IMDBTop' do
   pod 'RxCocoa',      '~> 4.0'
   pod 'Moya/RxSwift', '~> 12.0'
   pod 'AlamofireImage', '~> 3.5'
+  pod 'RealmSwift'
 
 end
 

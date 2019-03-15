@@ -8,6 +8,11 @@ PODS:
   - Moya/RxSwift (12.0.1):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
   - Result (4.1.0)
   - RxAtomic (4.4.2)
   - RxBlocking (4.4.2):
@@ -24,6 +29,7 @@ PODS:
 DEPENDENCIES:
   - AlamofireImage (~> 3.5)
   - Moya/RxSwift (~> 12.0)
+  - RealmSwift
   - RxBlocking (~> 4.0)
   - RxCocoa (~> 4.0)
   - RxTest (~> 4.0)
@@ -33,6 +39,8 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - Moya
+    - Realm
+    - RealmSwift
     - Result
     - RxAtomic
     - RxBlocking
@@ -44,6 +52,8 @@ SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
   RxBlocking: e96fdda1473d81332a6ed2cface935dc2167a122
@@ -51,6 +61,6 @@ SPEC CHECKSUMS:
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
   RxTest: 6433d5b6229f5de424fa534bc22b5e6c38b0b671
 
-PODFILE CHECKSUM: 11c26b860532054b7553e440c2a851009ce5051b
+PODFILE CHECKSUM: 24b08b360aefbb9d582d3adad85a4ac5cb77b97e
 
 COCOAPODS: 1.6.1
