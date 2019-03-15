@@ -61,7 +61,8 @@ extension MovieAPI: TheMoviedbTarget {
 extension Encodable {
     func asDictionary() -> [String: String]? {
         return (try? JSONEncoder().encode(self))
-            .flatMap { try? JSONSerialization.jsonObject(with: $0, options: []) }
-            .flatMap { $0 as? [String : String] }
+            .flatMap({ try? JSONSerialization.jsonObject(with: $0, options: []) })
+            .flatMap({ $0 as? [String : Any] })?
+            .mapValues({ String(describing: $0) })
     }
 }
