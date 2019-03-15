@@ -17,6 +17,7 @@ protocol TopListViewProtocol: class {
 protocol TopListPresenterProtocol: class {
     func viewDidLoad()
     func present(items: [Movie])
+    func presentNewPage()
     func present(movie: Movie)
 }
 

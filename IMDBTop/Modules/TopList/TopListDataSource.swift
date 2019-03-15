@@ -22,6 +22,14 @@ class TopListDataSource: NSObject {
         }
         return items[index]
     }
+    
+    func isLastIndex(_ index: Int) -> Bool {
+        return index == items.count - 1
+    }
+    
+    func append(_ newItems: [Movie]) {
+        items.append(contentsOf: newItems)
+    }
 }
 
 extension TopListDataSource: UITableViewDataSource {

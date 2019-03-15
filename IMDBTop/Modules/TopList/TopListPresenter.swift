@@ -27,6 +27,10 @@ class TopListPresenter: TopListPresenterProtocol {
         view.show(items: items)
     }
     
+    func presentNewPage() {
+        interactor.fetchItems()
+    }
+    
     func present(movie: Movie) {
         router.open(movie: movie)
     }

@@ -15,19 +15,31 @@ class TopListInteractor: TopListInteractorProtocol {
     private let bag = DisposeBag()
     private var moviesService: MovieServiceProtocol
     
+    private var currentPage: Int?
+    private var nextPage: Int? {
+        return currentPage.flatMap { $0 + 1 }
+    }
+    
     init(moviesService: MovieServiceProtocol) {
         self.moviesService = moviesService
     }
     
     func fetchItems() {
-        moviesService.topRated()
+        moviesService.topRated(with: nextPage)
             .subscribe(onSuccess: { [weak self] response in
+                if let page = response.page {
+                    self?.currentPage = page
+                } else {
+                    self?.currentPage = (self?.currentPage ?? 0) + 1
+                }
+                
                 guard let movies = response.results else {
                     return
                 }
                 
                 self?.presenter.present(items: movies)
             }, onError: { error in
+                // TODO: show error
                 print(error)
             }).disposed(by: bag)
     }

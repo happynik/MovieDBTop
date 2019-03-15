@@ -26,12 +26,14 @@ class TopListViewController: UIViewController, TopListViewProtocol {
         
         tableView.register(UINib(nibName: CinemaCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: CinemaCell.reuseIdentifier)
         tableView.delegate = self
+        
+        dataSource = TopListDataSource(items: [])
+        tableView.dataSource = dataSource
     }
     
     // MARK: - TopListViewProtocol
     func show(items: [Movie]) {
-        dataSource = TopListDataSource(items: items)
-        tableView.dataSource = dataSource
+        dataSource?.append(items)
         tableView.reloadData()
     }
 }
@@ -44,5 +46,15 @@ extension TopListViewController: UITableViewDelegate {
             return
         }
         presenter.present(movie: movie)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let dataSource = dataSource, dataSource.isLastIndex(indexPath.row) {
+            presenter.presentNewPage()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        
     }
 }
