@@ -24,6 +24,10 @@ class TopListPresenter: TopListPresenterProtocol {
         interactor.fetchItems()
     }
     
+    func presentFavorites() {
+        router.openFavorites()
+    }
+    
     func present(items: [Movie]) {
         view.show(loading: false)
         view.show(items: items)

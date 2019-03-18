@@ -9,6 +9,11 @@
 import UIKit
 import RxSwift
 
+enum FavoriteButtonStyle {
+    case add
+    case remove
+}
+
 class MovieViewController: UIViewController, MovieViewProtocol {
     var presenter: MoviePresenterProtocol!
     
@@ -18,6 +23,8 @@ class MovieViewController: UIViewController, MovieViewProtocol {
     @IBOutlet private weak var descriptionLabel: UILabel!
     
     private let bag = DisposeBag()
+    private var addToFavoriteButton: UIBarButtonItem?
+    private var removeFromFavoriteButton: UIBarButtonItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +33,10 @@ class MovieViewController: UIViewController, MovieViewProtocol {
     }
     
     private func setupUI() {
+        addToFavoriteButton = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addToFavoriteTap))
         
+        removeFromFavoriteButton = UIBarButtonItem(title: "Remove", style: .done, target: self, action: #selector(removeFromFavoriteTap))
+        removeFromFavoriteButton?.tintColor = .red
     }
     
     func show(movie: Movie) {
@@ -35,6 +45,18 @@ class MovieViewController: UIViewController, MovieViewProtocol {
         titleLabel.text = movie.title
         ratingLabel.text = "Rating \(movie.votePresent)"
         descriptionLabel.text = movie.overview
+    }
+    
+    func showButton(with style: FavoriteButtonStyle) {
+        navigationItem.rightBarButtonItem = style == .add ? addToFavoriteButton : removeFromFavoriteButton
+    }
+    
+    @objc private func addToFavoriteTap() {
+        presenter.addToFavorites()
+    }
+    
+    @objc private func removeFromFavoriteTap() {
+        presenter.removeFromFavorites()
     }
 }
 

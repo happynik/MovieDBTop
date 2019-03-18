@@ -23,7 +23,7 @@ class FavoritesPresenter: FavoritesPresenterProtocol {
         interactor.fetchFavorites()
     }
     
-    func present(favorites: [FavoriteMovie]) {
-        
+    func present(favorites: [Movie]) {
+        view.show(favorites: favorites)
     }
 }

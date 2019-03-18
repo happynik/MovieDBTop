@@ -13,6 +13,8 @@ class FavoritesViewController: UIViewController, FavoritesViewProtocol {
     
     @IBOutlet private weak var tableView: UITableView!
     
+    private var dataSource: TopListDataSource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -20,7 +22,14 @@ class FavoritesViewController: UIViewController, FavoritesViewProtocol {
     }
     
     private func setupUI() {
+        tableView.register(UINib(nibName: CinemaCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: CinemaCell.reuseIdentifier)
         tableView.delegate = self
+    }
+    
+    func show(favorites: [Movie]) {
+        dataSource = TopListDataSource(items: favorites)
+        tableView.dataSource = dataSource
+        tableView.reloadData()
     }
 }
 

@@ -25,6 +25,8 @@ class TopListViewController: UIViewController, TopListViewProtocol {
     private func setupUI() {
         navigationItem.title = "Top List"
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Favorites", style: .plain, target: self, action: #selector(favoritesTap))
+        
         tableView.register(UINib(nibName: CinemaCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: CinemaCell.reuseIdentifier)
         tableView.delegate = self
         
@@ -50,6 +52,10 @@ class TopListViewController: UIViewController, TopListViewProtocol {
             activityIndicator.isHidden = true
             activityIndicator.stopAnimating()
         }
+    }
+    
+    @objc private func favoritesTap() {
+        presenter.presentFavorites()
     }
 }
 

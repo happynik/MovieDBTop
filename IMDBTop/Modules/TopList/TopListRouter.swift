@@ -11,6 +11,11 @@ import UIKit
 class TopListRouter: TopListRouterProtocol {
     weak var view: UIViewController!
     
+    func openFavorites() {
+        let favorites = FavoritesAssembly().build()
+        view.navigationController?.pushViewController(favorites, animated: true)
+    }
+    
     func open(movie: Movie) {
         let movie = MovieAssembly().build(with: movie)
         view.navigationController?.pushViewController(movie, animated: true)

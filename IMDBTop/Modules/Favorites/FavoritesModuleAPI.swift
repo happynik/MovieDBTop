@@ -10,13 +10,13 @@ import Foundation
 
 //MARK: - View
 protocol FavoritesViewProtocol: class {
-    
+    func show(favorites: [Movie])
 }
 
 //MARK: - Presenter
 protocol FavoritesPresenterProtocol: class {
     func viewDidLoad()
-    func present(favorites: [FavoriteMovie])
+    func present(favorites: [Movie])
 }
 
 //MARK: - Interactor

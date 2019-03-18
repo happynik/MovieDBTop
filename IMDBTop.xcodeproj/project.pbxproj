@@ -31,10 +31,9 @@
 		A37007C9223BEC3B006303F9 /* FavoritesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37007C2223BEC3B006303F9 /* FavoritesAssembly.swift */; };
 		A37007CA223BEC3B006303F9 /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37007C3223BEC3B006303F9 /* FavoritesInteractor.swift */; };
 		A37007CB223BEC3B006303F9 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A37007C4223BEC3B006303F9 /* FavoritesViewController.xib */; };
-		A37007CD223BEE87006303F9 /* FavoriteMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37007CC223BEE87006303F9 /* FavoriteMovie.swift */; };
 		A37007CF223BEF2C006303F9 /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37007CE223BEF2C006303F9 /* FavoritesService.swift */; };
 		A37007D1223BF119006303F9 /* Realm+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37007D0223BF119006303F9 /* Realm+Background.swift */; };
-		A37007D3223BF213006303F9 /* RealmDBModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37007D2223BF213006303F9 /* RealmDBModels.swift */; };
+		A37007D3223BF213006303F9 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37007D2223BF213006303F9 /* RealmModels.swift */; };
 		A3B41B1F223A46DF00E7AF37 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B41B1E223A46DF00E7AF37 /* CommonService.swift */; };
 		A3B41B21223A47AF00E7AF37 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B41B20223A47AF00E7AF37 /* Configuration.swift */; };
 		A3B41B23223A4E0900E7AF37 /* UIImageView+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B41B22223A4E0900E7AF37 /* UIImageView+Path.swift */; };
@@ -93,10 +92,9 @@
 		A37007C2223BEC3B006303F9 /* FavoritesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesAssembly.swift; sourceTree = "<group>"; };
 		A37007C3223BEC3B006303F9 /* FavoritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
 		A37007C4223BEC3B006303F9 /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
-		A37007CC223BEE87006303F9 /* FavoriteMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovie.swift; sourceTree = "<group>"; };
 		A37007CE223BEF2C006303F9 /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
 		A37007D0223BF119006303F9 /* Realm+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Background.swift"; sourceTree = "<group>"; };
-		A37007D2223BF213006303F9 /* RealmDBModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDBModels.swift; sourceTree = "<group>"; };
+		A37007D2223BF213006303F9 /* RealmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
 		A3B41B1E223A46DF00E7AF37 /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
 		A3B41B20223A47AF00E7AF37 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A3B41B22223A4E0900E7AF37 /* UIImageView+Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Path.swift"; sourceTree = "<group>"; };
@@ -184,8 +182,7 @@
 				A30F94BB22390E570024F105 /* Movie.swift */,
 				A36F949B2239518E009DBC1C /* TopRated.swift */,
 				A3B41B20223A47AF00E7AF37 /* Configuration.swift */,
-				A37007CC223BEE87006303F9 /* FavoriteMovie.swift */,
-				A37007D2223BF213006303F9 /* RealmDBModels.swift */,
+				A37007D2223BF213006303F9 /* RealmModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -458,6 +455,7 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -472,6 +470,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,7 +542,6 @@
 				A3C7D0532237E9DE00422773 /* ViewController.swift in Sources */,
 				A3DCCB5A223A376100372453 /* MovieInteractor.swift in Sources */,
 				A37007CF223BEF2C006303F9 /* FavoritesService.swift in Sources */,
-				A37007CD223BEE87006303F9 /* FavoriteMovie.swift in Sources */,
 				A30F94B822390AD10024F105 /* CinemaCell.swift in Sources */,
 				A3B41B23223A4E0900E7AF37 /* UIImageView+Path.swift in Sources */,
 				A3B41B25223A509900E7AF37 /* ServicesFactory.swift in Sources */,
@@ -561,7 +559,7 @@
 				A30F94AD223901360024F105 /* TopListInteractor.swift in Sources */,
 				A30F94AA223901360024F105 /* TopListModuleAPI.swift in Sources */,
 				A30F94C322391A500024F105 /* MoviesService.swift in Sources */,
-				A37007D3223BF213006303F9 /* RealmDBModels.swift in Sources */,
+				A37007D3223BF213006303F9 /* RealmModels.swift in Sources */,
 				A36F949F223974AA009DBC1C /* CommonAPI.swift in Sources */,
 				A30F94AC223901360024F105 /* TopListAssembly.swift in Sources */,
 				A3B41B1F223A46DF00E7AF37 /* CommonService.swift in Sources */,

@@ -20,6 +20,23 @@ class MoviePresenter: MoviePresenterProtocol {
     }
     
     func viewDidLoad() {
+        interactor.fetchFavorite()
         view.show(movie: interactor.movie)
+    }
+    
+    func addToFavorites() {
+        interactor.AddToFavorites()
+    }
+    
+    func removeFromFavorites() {
+        interactor.removeFromFavorites()
+    }
+    
+    func presentAddButton() {
+        view.showButton(with: .add)
+    }
+    
+    func presentRemoveButton() {
+        view.showButton(with: .remove)
     }
 }

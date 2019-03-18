@@ -30,4 +30,8 @@ class ServicesFactory {
         let provider = MoyaProvider<MovieAPI>(plugins: [NetworkLoggerPlugin(verbose: true)])
         return MovieService(provider: provider)
     }
+    
+    var favoritesService: FavoritesServiceProtocol {
+        return FavoritesService()
+    }
 }

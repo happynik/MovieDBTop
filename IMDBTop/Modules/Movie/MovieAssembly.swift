@@ -12,7 +12,7 @@ class MovieAssembly {
     
     func build(with movie: Movie) -> UIViewController {
         let view = MovieViewController()
-        let interactor = MovieInteractor(movie: movie)
+        let interactor = MovieInteractor(movie: movie, favoritesService: ServicesFactory.shared.favoritesService)
         let router = MovieRouter()
         let presenter = MoviePresenter(view: view, interactor: interactor, router: router)
         

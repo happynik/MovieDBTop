@@ -17,6 +17,7 @@ protocol TopListViewProtocol: class {
 //MARK: - Presenter
 protocol TopListPresenterProtocol: class {
     func viewDidLoad()
+    func presentFavorites()
     func present(items: [Movie])
     func presentNewPage()
     func present(movie: Movie)
@@ -30,4 +31,5 @@ protocol TopListInteractorProtocol: class {
 //MARK: - Router
 protocol TopListRouterProtocol: class {
     func open(movie: Movie)
+    func openFavorites()
 }
