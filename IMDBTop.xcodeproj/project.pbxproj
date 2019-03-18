@@ -32,7 +32,6 @@
 		A37007CA223BEC3B006303F9 /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37007C3223BEC3B006303F9 /* FavoritesInteractor.swift */; };
 		A37007CB223BEC3B006303F9 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A37007C4223BEC3B006303F9 /* FavoritesViewController.xib */; };
 		A37007CF223BEF2C006303F9 /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37007CE223BEF2C006303F9 /* FavoritesService.swift */; };
-		A37007D1223BF119006303F9 /* Realm+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37007D0223BF119006303F9 /* Realm+Background.swift */; };
 		A37007D3223BF213006303F9 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37007D2223BF213006303F9 /* RealmModels.swift */; };
 		A3B41B1F223A46DF00E7AF37 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B41B1E223A46DF00E7AF37 /* CommonService.swift */; };
 		A3B41B21223A47AF00E7AF37 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B41B20223A47AF00E7AF37 /* Configuration.swift */; };
@@ -93,7 +92,6 @@
 		A37007C3223BEC3B006303F9 /* FavoritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
 		A37007C4223BEC3B006303F9 /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
 		A37007CE223BEF2C006303F9 /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
-		A37007D0223BF119006303F9 /* Realm+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Background.swift"; sourceTree = "<group>"; };
 		A37007D2223BF213006303F9 /* RealmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
 		A3B41B1E223A46DF00E7AF37 /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
 		A3B41B20223A47AF00E7AF37 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -190,9 +188,9 @@
 		A30F94BE223915D60024F105 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A3B41B24223A509900E7AF37 /* ServicesFactory.swift */,
 				A30F94C222391A500024F105 /* MoviesService.swift */,
 				A3B41B1E223A46DF00E7AF37 /* CommonService.swift */,
-				A3B41B24223A509900E7AF37 /* ServicesFactory.swift */,
 				A37007CE223BEF2C006303F9 /* FavoritesService.swift */,
 			);
 			path = Services;
@@ -222,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				A3B41B22223A4E0900E7AF37 /* UIImageView+Path.swift */,
-				A37007D0223BF119006303F9 /* Realm+Background.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -537,7 +534,6 @@
 			files = (
 				A30F94AB223901360024F105 /* TopListViewController.swift in Sources */,
 				A36F949A22394E4A009DBC1C /* TheMoviedbTarget.swift in Sources */,
-				A37007D1223BF119006303F9 /* Realm+Background.swift in Sources */,
 				A37007CA223BEC3B006303F9 /* FavoritesInteractor.swift in Sources */,
 				A3C7D0532237E9DE00422773 /* ViewController.swift in Sources */,
 				A3DCCB5A223A376100372453 /* MovieInteractor.swift in Sources */,
